@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <div class="container">
+        <div id="main-page" class="page active">
+            <h1>Multiplication Practice</h1>
+            <div class="selection-container">
+                <div class="dropdown-group">
+                    <label for="start-table">Start Table:</label>
+                    <select id="start-table">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="dropdown-group">
+                    <label for="end-table">End Table:</label>
+                    <select id="end-table">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10" selected>10</option>
+                    </select>
+                </div>
+            </div>
+            <button id="start-quiz-btn" class="btn-primary">Start Quiz</button>
+        </div>
+
+        <div id="quiz-page" class="page">
+            <div class="quiz-header">
+                <div class="timer">Time: <span id="timer">0:00</span></div>
+                <div class="progress">Question <span id="current-question">1</span> of 10</div>
+            </div>
+            <div class="quiz-content">
+                <div class="problem">
+                    <span id="problem-text">2 × 3 = ?</span>
+                </div>
+                <input type="number" id="answer-input" placeholder="Enter your answer">
+                <button id="submit-answer-btn" class="btn-primary">Submit</button>
+            </div>
+        </div>
+
+        <div id="summary-page" class="page">
+            <h2>Quiz Complete!</h2>
+            <div class="summary-stats">
+                <div class="stat">
+                    <span class="stat-label">Total Time:</span>
+                    <span id="total-time">0:00</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Correct Answers:</span>
+                    <span id="correct-count">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Incorrect Answers:</span>
+                    <span id="incorrect-count">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Score:</span>
+                    <span id="score-percentage">0%</span>
+                </div>
+            </div>
+            <div id="performance-message" class="performance-message"></div>
+            <div class="button-group">
+                <button id="restart-quiz-btn" class="btn-secondary">Restart Quiz</button>
+                <button id="back-to-main-btn" class="btn-primary">Back to Main</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/app.js"></script>
+</body>
+</html>
