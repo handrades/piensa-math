@@ -1,10 +1,10 @@
 const CACHE_NAME = 'multiplication-practice-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/styles.css',
+    '/public',
+    '/public/index.html',
+    '/public/styles.css',
     '../src/app.js',
-    '/manifest.json'
+    '/public/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
